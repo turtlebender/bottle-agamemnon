@@ -11,8 +11,8 @@ setup(
         platforms="any",
         py_modules=["bottle_agamemnon"],
         install_requires= [
-            'bottle (>=0.9)',
-            'agamemnon (>=0.4)'
+            'bottle>=0.9',
+            'agamemnon>=0.4'
             ],
         classifiers = [
             'Environment :: Web Environment',
