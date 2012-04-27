@@ -1,13 +1,8 @@
-from distutils.core import setup
-
-try:
-    from distutils.command.build_py import build_py_2to3 as build_py
-except ImportError:
-    from distutils.command.build_py import build_py
+from setuptools import setup
 
 setup(
         name="bottle-agamemnon",
-        version="0.0.1",
+        version="0.1.0",
         url="http://github.com/turtlebender/bottle-agamemnon/",
         description="Agamemnon integration for bottle",
         author="Tom Howe",
@@ -28,5 +23,4 @@ setup(
             'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
             'Topic :: Software Development :: Libraries :: Python Modules'
         ],
-        cmdclass = {'build_py': build_py}
 )
