@@ -59,3 +59,4 @@ class AgamemnonPlugin(object):
             return callback(*args, **kwargs)
         return wrapper
 
+Plugin = AgamemnonPlugin

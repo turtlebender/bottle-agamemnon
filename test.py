@@ -2,7 +2,7 @@ import unittest
 
 import bottle
 
-from bottle_agamemnon import AgamemnonPlugin
+import bottle_agamemnon
 from agamemnon.factory import DataStore
 class AgamemnonPluginTest(unittest.TestCase):
 
@@ -11,7 +11,7 @@ class AgamemnonPluginTest(unittest.TestCase):
 
 
     def test_with_keyword(self):
-        self.plugin = self.app.install(AgamemnonPlugin())
+        self.plugin = self.app.install(bottle_agamemnon.Plugin())
 
         @self.app.get('/')
         def test(agadb):
@@ -19,7 +19,7 @@ class AgamemnonPluginTest(unittest.TestCase):
         self.app({'PATH_INFO':'/', 'REQUEST_METHOD':'GET'}, lambda x, y: None)
 
     def test_without_keyword(self):
-        self.plugin = self.app.install(AgamemnonPlugin())
+        self.plugin = self.app.install(bottle_agamemnon.Plugin())
 
         @self.app.get('/')
         def test():
