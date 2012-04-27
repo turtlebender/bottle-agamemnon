@@ -10,7 +10,7 @@ setup(
         license="MIT",
         platforms="any",
         py_modules=["bottle_agamemnon"],
-        requires= [
+        install_requires= [
             'bottle (>=0.9)',
             'agamemnon (>=0.4)'
             ],
